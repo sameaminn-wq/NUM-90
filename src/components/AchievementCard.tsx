@@ -2,12 +2,18 @@ import React from 'react';
 import { Achievement } from '@/types/portfolio';
 
 export default function AchievementCard({ achievement }: { achievement: Achievement }) {
-  const typeColors = {
+  // تأمين الكائن باستخدام Record لمنع ثغرات الـ Type Poisoning وتحديد الألوان بدقة
+  const typeColors: Record<Achievement['type'], string> = {
     certification: 'bg-emerald-500/10 text-emerald-400 border-emerald-500/20',
     volunteer: 'bg-blue-500/10 text-blue-400 border-blue-500/20',
     humanitarian: 'bg-orange-500/10 text-orange-400 border-orange-500/20',
     education: 'bg-purple-500/10 text-purple-400 border-purple-500/20',
+    // إضافة النوع المفقود لحل مشكلة الـ Build فوراً مع الحفاظ على نفس نسق الألوان الخاص بك
+    project: 'bg-amber-500/10 text-amber-400 border-amber-500/20', 
   };
+
+  // حماية إضافية (Fallback Mechanism) لضمان عدم انهيار التطبيق إذا جاءت قيمة غير متوقعة من الـ API أو قاعدة البيانات
+  const currentBadgeColor = typeColors[achievement.type] || 'bg-slate-500/10 text-slate-400 border-slate-500/20';
 
   return (
     <div className="bg-slate-800/30 border border-slate-800 p-6 rounded-xl hover:border-emerald-500/40 transition-colors duration-200">
@@ -17,9 +23,7 @@ export default function AchievementCard({ achievement }: { achievement: Achievem
           <div className="flex items-center gap-2 flex-wrap">
             <h3 className="text-lg font-semibold text-white">{achievement.title}</h3>
             <span
-              className={`text-xs px-2 py-0.5 rounded-full border font-medium ${
-                typeColors[achievement.type]
-              }`}
+              className={`text-xs px-2 py-0.5 rounded-full border font-medium ${currentBadgeColor}`}
             >
               {achievement.type.charAt(0).toUpperCase() + achievement.type.slice(1)}
             </span>
