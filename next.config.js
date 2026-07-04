@@ -4,6 +4,5 @@ var nextConfig = {
     unoptimized: true,
   },
   trailingSlash: false,
-  swcMinify: true,
 };
 module.exports = nextConfig;
