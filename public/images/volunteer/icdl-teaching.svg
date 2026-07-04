@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="300">
+  <rect width="400" height="300" fill="#0f172a"/>
+  <rect x="20" y="20" width="360" height="260" rx="12" fill="#10b981" fill-opacity="0.05" stroke="#10b981" stroke-width="2" stroke-opacity="0.2"/>
+  <text x="200" y="140" text-anchor="middle" fill="#10b981" font-size="20" font-family="system-ui, sans-serif" font-weight="bold">👨‍🏫 ICDL Volunteer Teaching</text>
+  <text x="200" y="170" text-anchor="middle" fill="#94a3b8" font-size="14" font-family="system-ui, sans-serif">Salam Eifat Educational School</text>
+</svg>
