@@ -21,6 +21,7 @@ export interface Certification {
 }
 
 export interface Experience {
+  id: string; // ✅ تمت إضافتها
   role: string;
   company: string;
   period: string;
