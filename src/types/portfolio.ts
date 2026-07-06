@@ -21,11 +21,23 @@ export interface Certification {
 }
 
 export interface Experience {
-  id: string; // ✅ تمت إضافتها
+  id: string;
   role: string;
   company: string;
   period: string;
+
+  location?: string;
+
+  type?:
+    | 'professional'
+    | 'volunteer'
+    | 'education'
+    | 'freelance';
+
   description: string[];
+
+  achievements?: string[];
+
   verificationLetter?: string;
 }
 
@@ -34,7 +46,12 @@ export interface Achievement {
   title: string;
   description: string;
   icon: string;
-  type: 'certification' | 'volunteer' | 'humanitarian' | 'education' | 'project';
+  type:
+    | 'certification'
+    | 'volunteer'
+    | 'humanitarian'
+    | 'education'
+    | 'project';
   date: string;
 }
 
@@ -49,5 +66,9 @@ export interface GalleryImage {
   src: string;
   alt: string;
   caption: string;
-  category: 'certificate' | 'volunteer' | 'project' | 'event';
+  category:
+    | 'certificate'
+    | 'volunteer'
+    | 'project'
+    | 'event';
 }
