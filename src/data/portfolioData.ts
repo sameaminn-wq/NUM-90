@@ -177,6 +177,7 @@ export const experiences: Experience[] = [
       'Helping students prepare for ICDL certification exams.',
     ],
     verificationLetter: '/docs/letters/icdl-teaching.pdf',
+    id: ''
   },
   {
     role: 'Cybersecurity Trainee',
@@ -189,6 +190,7 @@ export const experiences: Experience[] = [
       'Received technical mentoring from cybersecurity professionals.',
     ],
     verificationLetter: '/docs/letters/hireq-completion.pdf',
+    id: ''
   },
   {
     role: 'Fundraising Officer',
@@ -199,6 +201,7 @@ export const experiences: Experience[] = [
       'Identified potential funding opportunities and supported fundraising initiatives.',
       'Continued independent study in cybersecurity alongside professional responsibilities.',
     ],
+    id: ''
   },
   {
     role: 'Humanitarian Volunteer & Data Entry Assistant',
@@ -211,6 +214,7 @@ export const experiences: Experience[] = [
       'Worked in emergency response during critical situations.',
     ],
     verificationLetter: '/docs/letters/soah-humanitarian.pdf',
+    id: ''
   },
 ];
 
@@ -370,7 +374,7 @@ export const galleryImages: GalleryImage[] = [
 
 export const skills = {
   aiTools: ['ChatGPT', 'Gemini', 'Claude', 'DeepSeek'],
-  frontend: ['Next.js', 'React', 'JavaScript', 'HTML5', 'CSS3', 'Tailwind CSS'],
+  frontend: ['Next.js', 'React', 'JavaScript', 'HTML5', 'Tailwind CSS', ' usain ai'],
   development: [
     'Problem Solving',
     'Debugging',
